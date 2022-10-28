@@ -10,7 +10,7 @@ export const useSignup = () => {
     setError(null);
 
     const response = await fetch(
-      "/api/user/signup",
+      "https://mern-workout-buddy.herokuapp.com/api/user/signup",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
