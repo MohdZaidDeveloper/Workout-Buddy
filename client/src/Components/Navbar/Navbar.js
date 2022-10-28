@@ -14,7 +14,7 @@ const{user} = useAuthContext()
   };
   return (
     <nav>
-      <Link to="/">WorkoutBuddy</Link>
+      <Link to="/">MyWorkoutBuddy</Link>
 
       {user && (
         <div className="logout">
