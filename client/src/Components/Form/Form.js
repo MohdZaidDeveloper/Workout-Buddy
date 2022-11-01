@@ -34,7 +34,7 @@ if(!user){
 }
 
     const response = await axios.post(
-      "https://mern-workout-buddy.herokuapp.com/api/workouts",
+      `${process.env.REACT_APP_API_URL}/api/workouts`,
       form,
       {
         headers: {
@@ -68,7 +68,7 @@ if(!user){
     const { _id, title, reps, load } = updateForm;
 
     await axios.patch(
-      `https://mern-workout-buddy.herokuapp.com/api/workouts/${_id} `,
+      `${process.env.REACT_APP_API_URL}/api/workouts/${_id} `,
       {
         title,
         reps,

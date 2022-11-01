@@ -10,7 +10,7 @@ export const useLogin = () => {
     setError(null);
 
     const response = await fetch(
-      "https://mern-workout-buddy.herokuapp.com/api/user/login",
+      `${process.env.REACT_APP_API_URL}/api/user/login`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -9,8 +9,6 @@
   },
   "scripts": {
     "start": "node index.js"
-    
-
   },
   "keywords": [],
   "author": "",

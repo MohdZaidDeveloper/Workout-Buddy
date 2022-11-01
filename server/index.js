@@ -24,12 +24,7 @@ app.use(cors());
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
 
-// //Deployment
 
-
-
-
-//   app.use(express.static(path.join(__dirname,"./client/build")));
   app.get("/", (req, res) => {
     res.send("Hello world!")
   })

@@ -11,7 +11,7 @@ const {user} = useAuthContext()
   //GET REQUEST FUNCTION
   const getWorkouts = async () => {
     const response = await axios.get(
-      "https://mern-workout-buddy.herokuapp.com/api/workouts",
+      `${process.env.REACT_APP_API_URL}/api/workouts`,
       {
         headers: {
           Authorization: `Bearer ${user.token}`,
@@ -32,14 +32,11 @@ const {user} = useAuthContext()
 
   //DELETE REQUEST FUNCTION
   const deleteWorkout = async (_id) => {
-    await axios.delete(
-      `https://mern-workout-buddy.herokuapp.com/api/workouts/${_id}`,
-      {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      }
-    );
+    await axios.delete(`${process.env.REACT_APP_API_URL}/api/workouts/${_id}`, {
+      headers: {
+        Authorization: `Bearer ${user.token}`,
+      },
+    });
     getWorkouts();
   };
 
